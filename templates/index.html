@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head> 
-		<title>Login Page</title> 
+		<title>Vitality</title> 
 		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
 	</head>
 
@@ -29,7 +29,8 @@
 				<label for="password">Password:</label>
 				<input type="password" id="password" name="password" required><br><br>
 				
-				<input type="submit" value="Login">
+				<input type="submit" value="Register">
+				<a href="/login">Already have an account? Click here.</a>
 				{% if error %}
 				<p>{{ error }}</p>
 				{% endif %}
@@ -38,3 +39,6 @@
 	</body>
 	
 </html>
+
+
+		

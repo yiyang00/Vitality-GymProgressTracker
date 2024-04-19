@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Dashboard</title> 
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
+	</head>
+
+	<body>
+		<header>
+			<img class="logo" src="https://cdn-icons-png.flaticon.com/512/4471/4471883.png" alt="logo">
+			<nav>
+				<ul class="nav_links">
+					<li><a href="/">Home</a></li>
+					<li><a href="/history">History</a></li>
+					<li><a href="/about">About</a></li>
+				</ul> 
+			</nav>
+			<a class="cta" href="#"><button>Contact</button></a>
+		</header>
+		
+		<div class="muscle-wiki">
+			<img src="https://play-lh.googleusercontent.com/mUNH_x2a1rGowlj-GMgl2fxeUKGNevmy35-xZS3Zkfa9pA9q834AwaI-nV1f_AxLrhQ" alt="MuscleWiki Logo" class="small-image">
+			<p><a href="https://musclewiki.com/">List of Exercises</a></p>
+			<p>(MuscleWiki)</p>
+		</div>
+	
+		<table class="styled-table">
+			<tr class="larger-font">
+				<td>Muscle Groups</td>
+				<td>Exercise Name, Weight(W), Repetitions(R), Date</td>
+				<td>Volume to Maintain (Formula: W x R)</td>
+			</tr>
+			<tr>
+				<td>Chest</td>
+				<td>
+					<form method = "POST">
+						<input type="text" name="c_exercise_name" placeholder="Exercise Name">
+						<input type="text" name="c_weight" placeholder="Weight (in kg)">
+						<input type="text" name="c_repetitions" placeholder="Repetitions">
+						<input type="date" name="c_date">
+						<input type="submit" value=" Add ">
+					</form>
+				</td>
+				<td>{{ c_max_volume }}</td>
+			</tr>
+			<tr>
+				<td>Back</td>
+				<td>
+					<form method = "POST">
+						<input type="text" name="b_exercise_name" placeholder="Exercise Name">
+						<input type="text" name="b_weight" placeholder="Weight (in kg)">
+						<input type="text" name="b_repetitions" placeholder="Repetitions">
+						<input type="date" name="b_date">
+						<input type="submit" value=" Add ">
+					</form>
+				</td>
+				<td>{{ b_max_volume }}</td>
+			</tr>
+			<tr>
+				<td>Arms</td>
+				<td>
+					<form method = "POST">
+						<input type="text" name="ar_exercise_name" placeholder="Exercise Name">
+						<input type="text" name="ar_weight" placeholder="Weight (in kg)">
+						<input type="text" name="ar_repetitions" placeholder="Repetitions">
+						<input type="date" name="ar_date">
+						<input type="submit" value=" Add ">
+					</form>
+				</td>
+				<td>{{ ar_max_volume }}</td>
+			</tr>
+			<tr>
+				<td>Abdominals</td>
+				<td>
+					<form method = "POST">
+						<input type="text" name="ab_exercise_name" placeholder="Exercise Name">
+						<input type="text" name="ab_weight" placeholder="Weight (in kg)">
+						<input type="text" name="ab_repetitions" placeholder="Repetitions">
+						<input type="date" name="ab_date">
+						<input type="submit" value=" Add ">
+					</form>
+				</td>
+				<td>{{ ab_max_volume }}</td>
+			</tr>
+			<tr>
+				<td>Legs</td>
+				<td>
+					<form method = "POST">
+						<input type="text" name="l_exercise_name" placeholder="Exercise Name">
+						<input type="text" name="l_weight" placeholder="Weight (in kg)">
+						<input type="text" name="l_repetitions" placeholder="Repetitions">
+						<input type="date" name="l_date">
+						<input type="submit" value=" Add ">
+					</form>
+				</td>
+				<td>{{ l_max_volume }}</td>
+			</tr>
+			<tr>
+				<td>Shoulders</td>
+				<td>
+					<form method = "POST">
+						<input type="text" name="s_exercise_name" placeholder="Exercise Name">
+						<input type="text" name="s_weight" placeholder="Weight (in kg)">
+						<input type="text" name="s_repetitions" placeholder="Repetitions">
+						<input type="date" name="s_date">
+						<input type="submit" value=" Add ">	
+					</form>
+				</td>
+				<td>{{ s_max_volume }}</td>
+			</tr>
+		</table>
+	</body>
+	
+</html>

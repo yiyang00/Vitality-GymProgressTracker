@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>History</title> 
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
+	</head>
+
+	<body>
+		<header>
+			<img class="logo" src="https://cdn-icons-png.flaticon.com/512/4471/4471883.png" alt="logo">
+			<nav>
+				<ul class="nav_links">
+					<li><a href="/">Home</a></li>
+					<li><a href="/history">History</a></li>
+					<li><a href="/about">About</a></li>
+				</ul> 
+			</nav>
+			<a class="cta" href="#"><button>Contact</button></a>
+		</header>
+		
+		<div class="muscle-wiki">
+			<img src="https://play-lh.googleusercontent.com/mUNH_x2a1rGowlj-GMgl2fxeUKGNevmy35-xZS3Zkfa9pA9q834AwaI-nV1f_AxLrhQ" alt="MuscleWiki Logo" class="small-image">
+			<p><a href="https://musclewiki.com/">List of Exercises</a></p>
+			<p>(MuscleWiki)</p>
+		</div>
+	
+		<table class="styled-table">
+			<tr class="larger-font">
+				<td>Muscle Groups</td>
+				<td>Exercise Log</td>
+			</tr>
+			<tr>
+				<td>Chest</td>
+				<td>
+					<table>
+						{% for value in c_rows %}
+						<tr>
+							<td>{{ value }}</td>
+						{% endfor %}
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>Back</td>
+				<td>
+					<table>
+						{% for value in b_rows %}
+						<tr>
+							<td>{{ value }}</td>
+						{% endfor %}
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>Arms</td>
+				<td>
+					<table>
+						{% for value in ar_rows %}
+						<tr>
+							<td>{{ value }}</td>
+						{% endfor %}
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>Abdominals</td>
+				<td>
+					<table>
+						{% for value in ab_rows %}
+						<tr>
+							<td>{{ value }}</td>
+						{% endfor %}
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>Legs</td>
+				<td>
+					<table>
+						{% for value in l_rows %}
+						<tr>
+							<td>{{ value }}</td>
+						{% endfor %}
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>Shoulders</td>
+				<td>
+					<table>
+						{% for value in s_rows %}
+						<tr>
+							<td>{{ value }}</td>
+						{% endfor %}
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+	
+</html>
